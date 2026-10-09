@@ -1,0 +1,16 @@
+PROJECT_NAME           = "lm70-rs"
+PROJECT_BRIEF          = "Platform-independent Rust driver for the TI LM70"
+OUTPUT_DIRECTORY       = target/doxygen
+INPUT                  = README.md src/lib.rs src/lm70.rs src/conversion.rs
+FILE_PATTERNS          = *.rs *.md
+RECURSIVE              = NO
+USE_MDFILE_AS_MAINPAGE = README.md
+MARKDOWN_SUPPORT       = YES
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+JAVADOC_AUTOBRIEF      = YES
+EXTENSION_MAPPING      = rs=C++
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+QUIET                  = YES
+WARN_IF_UNDOCUMENTED   = YES

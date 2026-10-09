@@ -1,0 +1,40 @@
+[package]
+name = "lm70"
+version = "0.1.0"
+authors = ["Luca Brugnera <luca.brugnera@gmail.com>"]
+repository = "https://github.com/Brughy/lm70-rs"
+license = "MIT OR Apache-2.0"
+description = "Platform-agnostic Rust driver for the LM70 temperature sensor."
+readme = "README.md"
+keywords = ["temperature", "sensor", "spi", "microwire", "embedded-hal-driver"]
+categories = ["embedded", "hardware-support", "no-std"]
+homepage = "https://github.com/Brughy/lm70-rs"
+documentation = "https://docs.rs/lm70"
+include = [
+    "/src/lib.rs",
+    "/src/lm70.rs",
+    "/src/conversion.rs",
+    "/tests/lm70.rs",
+    "/Cargo.toml",
+    "/README.md",
+    "/CHANGELOG.md",
+    "/Doxyfile",
+    "/LICENSE-MIT",
+    "/LICENSE-APACHE",
+]
+edition = "2021"
+autotests = false
+autoexamples = false
+
+[dependencies]
+embedded-hal = "1.0.0"
+
+[dev-dependencies]
+embedded-hal-mock = { version = "0.11.1", default-features = false, features = ["eh1"] }
+
+[[test]]
+name = "lm70"
+path = "tests/lm70.rs"
+
+[profile.release]
+lto = true
